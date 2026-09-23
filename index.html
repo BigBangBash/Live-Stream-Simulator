@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#0f0f0f"><title>Live Stream Simulator V3</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="app"><section class="camera">
+<video id="video" autoplay muted playsinline></video><div class="shade"></div>
+<header class="topbar"><div class="live-wrap"><span class="live-badge"><i></i> LIVE</span><span class="viewer-pill">◉ <span id="viewers">—</span></span></div><button id="fullscreenBtn" class="icon-btn">⛶</button></header>
+<section class="identity"><div class="avatar" id="avatar">?</div><div class="profile"><strong id="displayName">—</strong><span id="handle">@live</span></div></section>
+<section id="chat" class="chat"></section><section id="reactions" class="reactions"></section>
+<footer class="controls"><button id="cameraBtn" class="round-btn primary">↻</button><button id="likeBtn" class="round-btn">♥</button></footer>
+<div class="commentbar"><span>Kommentar hinzufügen …</span><span>♡</span><button id="menuBtn" class="dots">⋯</button></div>
+
+<div id="setup" class="overlay"><div class="card"><div class="logo">LIVE</div><h1>Livestream starten</h1><p>Nur deine Kamera wird verwendet. Das Mikrofon bleibt ausgeschaltet.</p>
+<label>Dein Name<input id="nameInput" autocomplete="off" placeholder="Name oder Kanalname"></label>
+<label>Zuschauerzahl<input id="viewerInput" type="number" inputmode="numeric" min="1" max="999999" placeholder="z. B. 4376"></label>
+<button id="startBtn" class="main-btn" disabled>Live starten</button><small>Beide Felder müssen ausgefüllt sein.</small></div></div>
+
+<div id="ended" class="overlay hidden"><div class="card"><div class="ended-icon">✓</div><h1>Livestream beendet</h1><div class="stats"><div><strong id="finalViewers">0</strong><span>Zuschauer</span></div></div><p>Die Kamera wurde ausgeschaltet.</p><button id="restartBtn" class="main-btn">Neuen Livestream starten</button></div></div>
+
+<div id="menuShade" class="menu-shade hidden"><div class="sheet"><div class="grab"></div><h3>Stream-Optionen</h3>
+<button class="dead">↗ <span>Teilen</span></button><button class="dead">⚙ <span>Einstellungen</span></button><button class="dead">♡ <span>Reaktionen</span></button><button class="dead">⚑ <span>Problem melden</span></button>
+<div class="separator"></div><button id="endBtn" class="end-option">■ <span>Livestream beenden</span></button><button id="cancelBtn" class="cancel">Abbrechen</button></div></div>
+</section></main><script src="app.js"></script></body></html>
